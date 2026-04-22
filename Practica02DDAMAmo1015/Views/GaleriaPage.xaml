@@ -10,7 +10,7 @@
                 <Frame Padding="10" Margin="10">
                     <VerticalStackLayout>
                         <Image Source="{Binding Imagen}" HeightRequest="120" />
-                        <Label Text="{Binding Nombre}" FontSize="18" />
+                        <Label Style="{StaticResource GlobalLabelStyle}" Text="{Binding Nombre}" FontSize="18" />
                     </VerticalStackLayout>
                 </Frame>
             </DataTemplate>

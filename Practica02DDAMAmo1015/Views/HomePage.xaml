@@ -11,25 +11,25 @@
                    HeightRequest="180"
                    HorizontalOptions="Center" />
 
-            <Label Text="Bienvenido a la aplicacion"
+            <Label Style="{StaticResource GlobalLabelStyle}" Text="Bienvenido a la aplicacion"
                    FontSize="28"
                    HorizontalOptions="Center"
                    FontAttributes="Bold" />
 
-            <Label Text="Usa el menu lateral o los botones de abajo para navegar."
+            <Label Style="{StaticResource GlobalLabelStyle}" Text="Usa el menu lateral o los botones de abajo para navegar."
                    FontSize="16"
                    HorizontalOptions="Center"
                    TextColor="Gray"
                    HorizontalTextAlignment="Center" />
 
-            <Button Text="Ir a la Galeria"
+            <Button Style="{StaticResource GlobalLabelStyle}" Text="Ir a la Galeria"
                     FontSize="18"
                     CornerRadius="12"
                     BackgroundColor="#512BD4"
                     TextColor="White"
                     Clicked="OnGaleriaClicked" />
 
-            <Button Text="Ir a Configuracion"
+            <Button Style="{StaticResource GlobalLabelStyle}" Text="Ir a Configuracion"
                     FontSize="18"
                     CornerRadius="12"
                     BackgroundColor="#6A4FBF"

@@ -6,8 +6,8 @@
 
     <VerticalStackLayout Padding="20">
         <Image x:Name="ImagenAnimal" HeightRequest="200" />
-        <Label x:Name="NombreAnimal" FontSize="24" />
-        <Label x:Name="DescripcionAnimal" FontSize="16" />
+        <Label Style="{StaticResource GlobalLabelStyle}" x:Name="NombreAnimal" FontSize="24" />
+        <Label Style="{StaticResource GlobalLabelStyle}" x:Name="DescripcionAnimal" FontSize="16" />
     </VerticalStackLayout>
 
 </ContentPage>

@@ -4,8 +4,47 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Configuración">
 
-    <VerticalStackLayout Padding="20">
-        <Label Text="Opciones de configuración" FontSize="24" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <Label Text="Personalizar aplicación"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Tamaño del texto" />
+            <Slider x:Name="TextSizeSlider"
+                    Minimum="12"
+                    Maximum="32"
+                    ValueChanged="OnTextSizeChanged" />
+
+            <Label Text="Color del texto" />
+            <Picker x:Name="ColorPicker"
+                    SelectedIndexChanged="OnColorChanged">
+                <Picker.Items>
+                    <x:String>Negro</x:String>
+                    <x:String>Rojo</x:String>
+                    <x:String>Azul</x:String>
+                    <x:String>Verde</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Tipografía" />
+            <Picker x:Name="FontPicker"
+                    SelectedIndexChanged="OnFontChanged">
+                <Picker.Items>
+                    <x:String>Default</x:String>
+                    <x:String>Sans</x:String>
+                    <x:String>Serif</x:String>
+                    <x:String>Monospace</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Frame Padding="15" BorderColor="Gray" CornerRadius="10">
+                <Label x:Name="PreviewLabel"
+                       Text="Vista previa del texto" />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
