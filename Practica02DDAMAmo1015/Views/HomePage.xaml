@@ -4,8 +4,39 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Inicio">
 
-    <VerticalStackLayout Padding="20">
-        <Label Text="Bienvenido a la app" FontSize="24" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="180"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Bienvenido a la aplicacion"
+                   FontSize="28"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+
+            <Label Text="Usa el menu lateral o los botones de abajo para navegar."
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Ir a la Galeria"
+                    FontSize="18"
+                    CornerRadius="12"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    Clicked="OnGaleriaClicked" />
+
+            <Button Text="Ir a Configuracion"
+                    FontSize="18"
+                    CornerRadius="12"
+                    BackgroundColor="#6A4FBF"
+                    TextColor="White"
+                    Clicked="OnConfigClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
