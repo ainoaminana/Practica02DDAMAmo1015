@@ -1,19 +1,23 @@
-namespace Practica02DDAMAmo1015.Views;
+using System;
+using Microsoft.Maui.Controls;
 
-public partial class HomePage : ContentPage
+namespace Practica02DDAMAmo1015.Views
 {
-    public HomePage()
+    public partial class HomePage : ContentPage
     {
-        InitializeComponent();
-    }
+        public HomePage()
+        {
+            InitializeComponent();
+        }
 
-    private async void OnGaleriaClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("//galeria");
-    }
+        private async void OnGaleriaClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//galeria");
+        }
 
-    private async void OnConfigClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("//configuracion");
+        private async void OnConfigClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//configuracion");
+        }
     }
 }

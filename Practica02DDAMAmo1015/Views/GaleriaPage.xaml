@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Practica02DDAMAmo1015.Views.GaleriaPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -14,13 +15,28 @@
 
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame Padding="10" Margin="10" CornerRadius="12" HasShadow="True">
+                <Frame Padding="10"
+                       Margin="10"
+                       CornerRadius="18"
+                       HasShadow="True"
+                       BorderColor="{StaticResource AzulCeleste}"
+                       BackgroundColor="White">
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCardTapped" />
+                    </Frame.GestureRecognizers>
+
                     <VerticalStackLayout>
-                        <Image Source="{Binding Imagen}" HeightRequest="120" Aspect="AspectFill" />
+                        <Image Source="{Binding Imagen}"
+                               HeightRequest="120"
+                               Aspect="AspectFill" />
+
                         <Label Text="{Binding Nombre}"
                                HorizontalOptions="Center"
-                               FontAttributes="Bold" />
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource AzulBoton}" />
                     </VerticalStackLayout>
+
                 </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>

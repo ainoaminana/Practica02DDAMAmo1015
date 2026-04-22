@@ -63,12 +63,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\DetalleAnimalPage.xaml.cs">
+	    <DependentUpon>DetalleAnimalPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 		<MauiXaml Update="App.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 
 		<MauiXaml Update="AppShell.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+
+		<MauiXaml Update="Views\HomePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 
 		<MauiXaml Update="MainPage.xaml">
@@ -82,9 +92,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\GaleriaPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">

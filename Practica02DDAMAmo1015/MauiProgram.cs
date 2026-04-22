@@ -19,7 +19,7 @@ namespace Practica02DDAMAmo1015
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

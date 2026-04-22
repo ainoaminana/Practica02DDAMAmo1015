@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Practica02DDAMAmo1015.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -11,30 +12,16 @@
                    HeightRequest="180"
                    HorizontalOptions="Center" />
 
-            <Label Style="{StaticResource GlobalLabelStyle}" Text="Bienvenido a la aplicacion"
-                   FontSize="28"
+            <Label Style="{StaticResource TituloLabel}"
+                   Text="Bienvenido a la aplicación" />
+
+            <Label Text="Usa el menú lateral o los botones de abajo para navegar."
                    HorizontalOptions="Center"
-                   FontAttributes="Bold" />
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray" />
 
-            <Label Style="{StaticResource GlobalLabelStyle}" Text="Usa el menu lateral o los botones de abajo para navegar."
-                   FontSize="16"
-                   HorizontalOptions="Center"
-                   TextColor="Gray"
-                   HorizontalTextAlignment="Center" />
-
-            <Button Style="{StaticResource GlobalLabelStyle}" Text="Ir a la Galeria"
-                    FontSize="18"
-                    CornerRadius="12"
-                    BackgroundColor="#512BD4"
-                    TextColor="White"
-                    Clicked="OnGaleriaClicked" />
-
-            <Button Style="{StaticResource GlobalLabelStyle}" Text="Ir a Configuracion"
-                    FontSize="18"
-                    CornerRadius="12"
-                    BackgroundColor="#6A4FBF"
-                    TextColor="White"
-                    Clicked="OnConfigClicked" />
+            <Button Text="Ir a la Galería" Clicked="OnGaleriaClicked" />
+            <Button Text="Ir a Configuración" Clicked="OnConfigClicked" />
 
         </VerticalStackLayout>
     </ScrollView>

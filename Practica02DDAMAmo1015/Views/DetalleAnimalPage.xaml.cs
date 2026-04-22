@@ -1,4 +1,5 @@
 using Practica02DDAMAmo1015.Models;
+
 namespace Practica02DDAMAmo1015.Views;
 
 [QueryProperty(nameof(Animal), "animal")]
@@ -17,5 +18,10 @@ public partial class DetalleAnimalPage : ContentPage
     public DetalleAnimalPage()
     {
         InitializeComponent();
+    }
+
+    private async void OnVolverClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
     }
 }

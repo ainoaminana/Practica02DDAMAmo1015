@@ -1,23 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="Practica02DDAMAmo1015.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Practica02DDAMAmo1015.Views">
 
-    <ShellContent
-        Title="Inicio"
-        ContentTemplate="{DataTemplate views:HomePage}"
-        Route="home" />
+    <Shell.FlyoutBackground>
+        <SolidColorBrush Color="{StaticResource FondoBlanco}" />
+    </Shell.FlyoutBackground>
 
-    <ShellContent
-        Title="Galería"
-        ContentTemplate="{DataTemplate views:GaleriaPage}"
-        Route="galeria" />
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid Padding="20" BackgroundColor="{StaticResource AzulCeleste}">
+                <Label Text="Menú"
+                       FontFamily="Konthen"
+                       FontSize="32"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 
-    <ShellContent
-        Title="Configuración"
-        ContentTemplate="{DataTemplate views:ConfiguracionPage}"
-        Route="configuracion" />
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid Padding="10">
+                <Label Text="{Binding Title}"
+                       FontFamily="Konthen"
+                       FontSize="22"
+                       TextColor="{StaticResource AzulBoton}" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <ShellContent Title="Inicio" ContentTemplate="{DataTemplate views:HomePage}" Route="home" />
+    <ShellContent Title="Galería" ContentTemplate="{DataTemplate views:GaleriaPage}" Route="galeria" />
+    <ShellContent Title="Configuración" ContentTemplate="{DataTemplate views:ConfiguracionPage}" Route="configuracion" />
 
 </Shell>

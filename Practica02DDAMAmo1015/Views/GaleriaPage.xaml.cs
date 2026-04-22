@@ -49,4 +49,17 @@ public partial class GaleriaPage : ContentPage
             AnimalesView.SelectedItem = null; // Limpia la selección
         }
     }
+
+    private async void OnCardTapped(object sender, TappedEventArgs e)
+    {
+        if (sender is Frame frame)
+        {
+            await frame.ScaleTo(0.95, 100, Easing.CubicOut);
+            await frame.TranslateTo(0, 3, 100, Easing.CubicOut);
+
+            await frame.ScaleTo(1, 100, Easing.CubicIn);
+            await frame.TranslateTo(0, 0, 100, Easing.CubicIn);
+        }
+    }
+
 }

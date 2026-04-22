@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application
     x:Class="Practica02DDAMAmo1015.App"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -6,29 +6,46 @@
 
     <Application.Resources>
 
-        <!-- ============================= -->
-        <!--   RECURSOS GLOBALES DINÁMICOS -->
-        <!-- ============================= -->
+        <!-- PALETA MARINA -->
+        <Color x:Key="FondoBlanco">#FFFFFF</Color>
+        <Color x:Key="AzulCeleste">#7EC8E3</Color>
+        <Color x:Key="AzulBoton">#4FA3C4</Color>
+        <Color x:Key="TextoBoton">#FFFFFF</Color>
 
-        <!-- Tamaño global del texto -->
+        <!-- RECURSOS DINÁMICOS -->
         <x:Double x:Key="GlobalFontSize">20</x:Double>
-
-        <!-- Color global del texto -->
         <Color x:Key="GlobalFontColor">Black</Color>
+        <x:String x:Key="GlobalFontFamily">Konthen</x:String>
 
-        <!-- Fuente global -->
-        <x:String x:Key="GlobalFontFamily">OpenSansRegular</x:String>
+        <!-- ESTILO GLOBAL PARA PÁGINAS -->
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{StaticResource FondoBlanco}" />
+        </Style>
 
-
-        <!-- ============================= -->
-        <!--   ESTILO GLOBAL IMPLÍCITO     -->
-        <!-- ============================= -->
-        <!-- Este estilo se aplica a TODOS los Label automáticamente -->
-        <!-- No tiene x:Key → es implícito -->
+        <!-- ESTILO GLOBAL PARA LABEL -->
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="{DynamicResource GlobalFontSize}" />
             <Setter Property="TextColor" Value="{DynamicResource GlobalFontColor}" />
             <Setter Property="FontFamily" Value="{DynamicResource GlobalFontFamily}" />
+        </Style>
+
+        <!-- ESTILO PARA TÍTULOS -->
+        <Style x:Key="TituloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource AzulCeleste}" />
+            <Setter Property="FontFamily" Value="Konthen" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+
+        <!-- ESTILO GLOBAL PARA BOTONES -->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource AzulBoton}" />
+            <Setter Property="TextColor" Value="{StaticResource TextoBoton}" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="FontFamily" Value="OrangeGumdrop" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Padding" Value="12,8" />
         </Style>
 
     </Application.Resources>
