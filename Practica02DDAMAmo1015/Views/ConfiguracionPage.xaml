@@ -4,19 +4,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Configuración">
 
+    <!--
+        Página de configuración de la aplicación.
+        Permite modificar tamaño, color y tipografía del texto mediante recursos dinámicos.
+    -->
+
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="25">
 
+            <!-- Título principal -->
             <Label Text="Personalizar aplicación"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
+            <!-- Selector de tamaño de texto -->
             <Label Text="Tamaño del texto" />
             <Slider x:Name="TextSizeSlider"
                     Minimum="12"
                     Maximum="32"
                     ValueChanged="OnTextSizeChanged" />
 
+            <!-- Selector de color -->
             <Label Text="Color del texto" />
             <Picker x:Name="ColorPicker"
                     SelectedIndexChanged="OnColorChanged">
@@ -28,6 +36,7 @@
                 </Picker.Items>
             </Picker>
 
+            <!-- Selector de tipografía -->
             <Label Text="Tipografía" />
             <Picker x:Name="FontPicker"
                     SelectedIndexChanged="OnFontChanged">
@@ -39,6 +48,7 @@
                 </Picker.Items>
             </Picker>
 
+            <!-- Vista previa del texto -->
             <Frame Padding="15" BorderColor="Gray" CornerRadius="10">
                 <Label x:Name="PreviewLabel"
                        Text="Vista previa del texto" />

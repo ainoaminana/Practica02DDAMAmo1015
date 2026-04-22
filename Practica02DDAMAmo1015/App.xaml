@@ -4,32 +4,37 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!--
+        Archivo de recursos globales de la aplicación.
+        Define colores, estilos y recursos dinámicos utilizados en todas las páginas.
+    -->
+
     <Application.Resources>
 
-        <!-- PALETA MARINA -->
+        <!-- Paleta de colores principal -->
         <Color x:Key="FondoBlanco">#FFFFFF</Color>
         <Color x:Key="AzulCeleste">#7EC8E3</Color>
         <Color x:Key="AzulBoton">#4FA3C4</Color>
         <Color x:Key="TextoBoton">#FFFFFF</Color>
 
-        <!-- RECURSOS DINÁMICOS -->
+        <!-- Recursos dinámicos para personalización desde Configuración -->
         <x:Double x:Key="GlobalFontSize">20</x:Double>
         <Color x:Key="GlobalFontColor">Black</Color>
         <x:String x:Key="GlobalFontFamily">Konthen</x:String>
 
-        <!-- ESTILO GLOBAL PARA PÁGINAS -->
+        <!-- Estilo global para todas las páginas -->
         <Style TargetType="ContentPage">
             <Setter Property="BackgroundColor" Value="{StaticResource FondoBlanco}" />
         </Style>
 
-        <!-- ESTILO GLOBAL PARA LABEL -->
+        <!-- Estilo global para todos los Label -->
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="{DynamicResource GlobalFontSize}" />
             <Setter Property="TextColor" Value="{DynamicResource GlobalFontColor}" />
             <Setter Property="FontFamily" Value="{DynamicResource GlobalFontFamily}" />
         </Style>
 
-        <!-- ESTILO PARA TÍTULOS -->
+        <!-- Estilo para títulos principales -->
         <Style x:Key="TituloLabel" TargetType="Label">
             <Setter Property="FontSize" Value="28" />
             <Setter Property="FontAttributes" Value="Bold" />
@@ -38,7 +43,7 @@
             <Setter Property="HorizontalOptions" Value="Center" />
         </Style>
 
-        <!-- ESTILO GLOBAL PARA BOTONES -->
+        <!-- Estilo global para botones -->
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="{StaticResource AzulBoton}" />
             <Setter Property="TextColor" Value="{StaticResource TextoBoton}" />

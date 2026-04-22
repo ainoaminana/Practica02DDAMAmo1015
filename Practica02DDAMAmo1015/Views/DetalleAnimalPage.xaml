@@ -5,22 +5,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Detalles">
 
+    <!--
+        Página que muestra la información detallada de un animal seleccionado.
+        Los datos se reciben mediante QueryProperty desde la galería.
+    -->
+
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
+            <!-- Imagen del animal -->
             <Image x:Name="ImagenAnimal"
                    HeightRequest="250"
                    Aspect="AspectFill"
                    HorizontalOptions="Center" />
 
+            <!-- Nombre del animal -->
             <Label x:Name="NombreAnimal"
                    Style="{StaticResource TituloLabel}" />
 
+            <!-- Descripción del animal -->
             <Label x:Name="DescripcionAnimal"
                    FontSize="20"
                    TextColor="{StaticResource AzulBoton}"
                    HorizontalTextAlignment="Center" />
 
+            <!-- Botón para volver atrás -->
             <Button Text="Volver" Clicked="OnVolverClicked" />
 
         </VerticalStackLayout>

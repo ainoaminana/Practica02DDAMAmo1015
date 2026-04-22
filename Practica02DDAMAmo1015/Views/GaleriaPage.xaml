@@ -5,14 +5,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Galería">
 
+    <!--
+        Página que muestra una galería de animales en formato de cuadrícula.
+        Cada tarjeta permite ver los detalles del animal seleccionado.
+    -->
+
     <CollectionView x:Name="AnimalesView"
                     SelectionMode="Single"
                     SelectionChanged="OnAnimalSelected">
 
+        <!-- Diseño en cuadrícula con dos columnas -->
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical" Span="2" />
         </CollectionView.ItemsLayout>
 
+        <!-- Plantilla visual para cada animal -->
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Frame Padding="10"
@@ -22,15 +29,18 @@
                        BorderColor="{StaticResource AzulCeleste}"
                        BackgroundColor="White">
 
+                    <!-- Animación al pulsar la tarjeta -->
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnCardTapped" />
                     </Frame.GestureRecognizers>
 
                     <VerticalStackLayout>
+                        <!-- Imagen del animal -->
                         <Image Source="{Binding Imagen}"
                                HeightRequest="120"
                                Aspect="AspectFill" />
 
+                        <!-- Nombre del animal -->
                         <Label Text="{Binding Nombre}"
                                HorizontalOptions="Center"
                                FontAttributes="Bold"

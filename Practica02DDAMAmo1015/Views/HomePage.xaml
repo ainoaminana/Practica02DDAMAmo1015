@@ -5,21 +5,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Inicio">
 
+    <!--
+        Página principal tras iniciar sesión.
+        Muestra un mensaje de bienvenida y accesos directos a la galería y configuración.
+    -->
+
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
 
-            <Image Source="dotnet_bot.png"
+            <!-- Imagen decorativa -->
+            <Image Source="tiburon_home.jpg"
                    HeightRequest="180"
                    HorizontalOptions="Center" />
 
+            <!-- Título de bienvenida -->
             <Label Style="{StaticResource TituloLabel}"
-                   Text="Bienvenido a la aplicación" />
+                   Text="¡Bienvenid@ al océano!" />
 
+            <!-- Texto descriptivo -->
             <Label Text="Usa el menú lateral o los botones de abajo para navegar."
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    TextColor="Gray" />
 
+            <!-- Botones de navegación -->
             <Button Text="Ir a la Galería" Clicked="OnGaleriaClicked" />
             <Button Text="Ir a Configuración" Clicked="OnConfigClicked" />
 

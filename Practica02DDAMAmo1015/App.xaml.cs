@@ -1,11 +1,19 @@
-﻿namespace Practica02DDAMAmo1015;
-
-public partial class App : Application
+﻿namespace Practica02DDAMAmo1015
 {
-    public App()
+    /// <summary>
+    /// Clase principal de la aplicación MAUI.
+    /// Configura la página inicial y carga los recursos globales definidos en XAML.
+    /// </summary>
+    public partial class App : Application
     {
-        InitializeComponent();
-
-        MainPage = new NavigationPage(new Views.LoginPage());
+        /// <summary>
+        /// Constructor de la aplicación.
+        /// Inicializa los componentes y establece AppShell como página raíz.
+        /// </summary>
+        public App()
+        {
+            InitializeComponent();
+            MainPage = new AppShell();
+        }
     }
 }

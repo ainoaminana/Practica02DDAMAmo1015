@@ -5,14 +5,34 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Login">
 
-    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+    <!--
+        Página de inicio de sesión.
+        Permite autenticación mediante usuario/contraseña o mediante huella dactilar.
+    -->
 
-        <Label Text="Iniciar sesión" FontSize="24" HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
 
-        <Entry x:Name="UsernameEntry" Placeholder="Usuario" />
-        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
+        <!-- Título -->
+        <Label Style="{StaticResource TituloLabel}"
+               Text="Iniciar sesión" />
 
-        <Button Text="Acceder" Clicked="OnLoginClicked" />
+        <!-- Entrada de usuario -->
+        <Entry x:Name="UsernameEntry"
+               Placeholder="Usuario" />
+
+        <!-- Entrada de contraseña -->
+        <Entry x:Name="PasswordEntry"
+               Placeholder="Contraseña"
+               IsPassword="True" />
+
+        <!-- Botón de acceso manual -->
+        <Button Text="Acceder"
+                Clicked="OnLoginClicked" />
+
+        <!-- Botón de acceso biométrico -->
+        <Button Text="Acceder con huella"
+                Clicked="OnFingerprintClicked" />
 
     </VerticalStackLayout>
+
 </ContentPage>

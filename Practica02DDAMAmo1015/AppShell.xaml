@@ -5,10 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Practica02DDAMAmo1015.Views">
 
+    <!--
+        Estructura de navegación principal de la aplicación.
+        Define el menú lateral (Flyout) y las rutas de navegación.
+    -->
+
+    <!-- Fondo del menú lateral -->
     <Shell.FlyoutBackground>
         <SolidColorBrush Color="{StaticResource FondoBlanco}" />
     </Shell.FlyoutBackground>
 
+    <!-- Encabezado del menú lateral -->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <Grid Padding="20" BackgroundColor="{StaticResource AzulCeleste}">
@@ -21,6 +28,7 @@
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
+    <!-- Estilo de los elementos del menú -->
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -32,8 +40,24 @@
         </DataTemplate>
     </Shell.ItemTemplate>
 
-    <ShellContent Title="Inicio" ContentTemplate="{DataTemplate views:HomePage}" Route="home" />
-    <ShellContent Title="Galería" ContentTemplate="{DataTemplate views:GaleriaPage}" Route="galeria" />
-    <ShellContent Title="Configuración" ContentTemplate="{DataTemplate views:ConfiguracionPage}" Route="configuracion" />
+    <!-- Página de login (no visible en el menú) -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="login"
+        FlyoutItemIsVisible="False" />
+
+    <!-- Páginas principales del menú -->
+    <ShellContent Title="Inicio"
+                  ContentTemplate="{DataTemplate views:HomePage}"
+                  Route="home" />
+
+    <ShellContent Title="Galería"
+                  ContentTemplate="{DataTemplate views:GaleriaPage}"
+                  Route="galeria" />
+
+    <ShellContent Title="Configuración"
+                  ContentTemplate="{DataTemplate views:ConfiguracionPage}"
+                  Route="configuracion" />
 
 </Shell>
