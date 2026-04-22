@@ -63,7 +63,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\ConfiguracionPage.xaml">
+		<MauiXaml Update="App.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+
+		<MauiXaml Update="AppShell.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+
+		<MauiXaml Update="MainPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+
+		<MauiXaml Update="Views\ConfiguracionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DetalleAnimalPage.xaml">

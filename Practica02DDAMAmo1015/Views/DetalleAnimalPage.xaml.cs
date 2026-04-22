@@ -1,6 +1,6 @@
 using Practica02DDAMAmo1015.Models;
-
 namespace Practica02DDAMAmo1015.Views;
+
 [QueryProperty(nameof(Animal), "animal")]
 public partial class DetalleAnimalPage : ContentPage
 {

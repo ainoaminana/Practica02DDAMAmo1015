@@ -1,4 +1,4 @@
-namespace Practica02DDAMAmo1015;
+namespace Practica02DDAMAmo1015.Views;
 
 public partial class LoginPage : ContentPage
 {
