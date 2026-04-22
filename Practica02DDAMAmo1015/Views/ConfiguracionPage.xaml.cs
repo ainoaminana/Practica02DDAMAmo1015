@@ -32,10 +32,11 @@ public partial class ConfiguracionPage : ContentPage
 
         Application.Current.Resources["GlobalFontFamily"] = font switch
         {
-            "Sans" => "sans-serif",
-            "Serif" => "serif",
-            "Monospace" => "monospace",
-            _ => "sans-serif"
+            "Sans" => "OpenSansRegular",
+            "Serif" => "OpenSansBold",
+            "Monospace" => "CourierPrime",
+            _ => "OpenSansRegular"
         };
     }
+
 }

@@ -17,7 +17,7 @@
         <Color x:Key="GlobalFontColor">Black</Color>
 
         <!-- Fuente global -->
-        <x:String x:Key="GlobalFontFamily">sans-serif</x:String>
+        <x:String x:Key="GlobalFontFamily">OpenSansRegular</x:String>
 
 
         <!-- ============================= -->

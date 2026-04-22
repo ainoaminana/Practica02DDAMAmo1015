@@ -12,7 +12,10 @@ namespace Practica02DDAMAmo1015
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("OpenSans-Bold.ttf", "OpenSansBold");
+                    fonts.AddFont("CourierPrime-Regular.ttf", "CourierPrime");
+                    fonts.AddFont("Konthen.otf", "Konthen");
+                    fonts.AddFont("OrangeGumdrop-PersonalUse-Regular.otf", "OrangeGumdrop");
                 });
 
 #if DEBUG

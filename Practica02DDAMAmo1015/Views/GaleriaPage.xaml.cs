@@ -1,4 +1,5 @@
 using Practica02DDAMAmo1015.Models;
+
 namespace Practica02DDAMAmo1015.Views;
 
 public partial class GaleriaPage : ContentPage
@@ -9,8 +10,30 @@ public partial class GaleriaPage : ContentPage
 
         AnimalesView.ItemsSource = new List<Animal>
         {
-            new Animal { Nombre="León", Imagen="leon.jpg", Descripcion="Rey de la selva" },
-            new Animal { Nombre="Tigre", Imagen="tigre.jpg", Descripcion="Felino poderoso" }
+            new Animal
+            {
+                Nombre = "Tiburón Blanco",
+                Imagen = "tiburon_blanco.jpg",
+                Descripcion = "El depredador marino más famoso, rápido y poderoso."
+            },
+            new Animal
+            {
+                Nombre = "Tiburón Martillo",
+                Imagen = "tiburon_martillo.png",
+                Descripcion = "Reconocible por su cabeza en forma de T, es un excelente cazador."
+            },
+            new Animal
+            {
+                Nombre = "Tiburón Toro",
+                Imagen = "tiburon_toro.jpg",
+                Descripcion = "Agresivo y adaptable, es capaz de vivir en agua dulce."
+            },
+            new Animal
+            {
+                Nombre = "Tiburón Zorro",
+                Imagen = "tiburon_zorro.jpg",
+                Descripcion = "Con una cola enorme que usa para aturdir a sus presas y saltar sobre el agua."
+            }
         };
     }
 
@@ -22,6 +45,8 @@ public partial class GaleriaPage : ContentPage
             {
                 { "animal", animal }
             });
+
+            AnimalesView.SelectedItem = null; // Limpia la selección
         }
     }
 }
